@@ -227,7 +227,7 @@ html{
 body.dark-theme{
   --title-color: #F1F3F2;
   --text-color: #C7D1CC;
-  --body-color: #1D2521;
+  --body-color: #171a18;
   --container-color: #27302C;
 }
 
@@ -387,7 +387,7 @@ img{
   justify-content: center;
   align-items: center;
   padding: .3rem;
-  background: rgba(6,156,84,.5);
+  background: greenyellow;
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
