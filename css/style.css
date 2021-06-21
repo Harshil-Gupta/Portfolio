@@ -397,6 +397,11 @@ img {
   top: var(--header-height);
 }
 
+/* Active menu */
+.active-link {
+  color: var(--first-color);
+}
+
 /* Change background header */
 .scroll-header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
