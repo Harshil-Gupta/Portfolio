@@ -48,11 +48,11 @@
 
   /*========== Colors ==========*/
   --first-color: #74c50b;
-  --first-color-alt: #fbff00;
+  --first-color-alt: #27e787;
   --title-color: #393939;
   --text-color: #707070;
   --text-color-light: #a6a6a6;
-  --body-color: #fbfefd;
+  --body-color: white;
   --container-color: #ffffff;
 
   /*========== Font and typography ==========*/
@@ -235,7 +235,7 @@ html {
 }
 
 a:hover {
-  color: #048654;
+  color: grey;
 }
 
 /* Responsive */
@@ -397,11 +397,6 @@ img {
   top: var(--header-height);
 }
 
-/* Active menu */
-.active-link {
-  color: var(--first-color);
-}
-
 /* Change background header */
 .scroll-header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -416,7 +411,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 0.3rem;
-  background: greenyellow;
+  background: deepskyblue;
   border-radius: 0.4rem;
   z-index: var(--z-tooltip);
   transition: 0.4s;
@@ -464,7 +459,8 @@ img {
 /*========== BUTTONS ==========*/
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  /* background-color: var(--first-color); */
+  background-color: cornflowerblue;
   color: #fff;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
@@ -711,9 +707,6 @@ p {
     align-items: center;
   }
   .contact__button {
-    justify-self: center;
-  }
-  .subscribe__button {
     justify-self: center;
   }
 }
