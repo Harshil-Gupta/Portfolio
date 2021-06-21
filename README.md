@@ -13,5 +13,6 @@ I have updated the portfolio and therefore this GIF might not be relevant. Click
 5. Contact Us too many br tags, more gap than needed.
 6. Connect and contact at bottom do nothing.
 7. Change Title to Harshil Gupta and change logo to HG.
-8. <s> Change Photo in README to a GIF. </s>
-9. <s> Display Certificates in carousel feature. </s>
+8. Certificates black version is not looking good.
+9. <s> Change Photo in README to a GIF. </s>
+10. <s> Display Certificates in carousel feature. </s>
