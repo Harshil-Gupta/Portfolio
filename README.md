@@ -8,11 +8,11 @@ I have updated the portfolio and therefore this GIF might not be relevant. Click
 ## To - Do
 1. Add Experience Section
 2. Contact Form Valid Input
-3. Contact Form directs messages to me in mail 
+3. <s> Contact Form directs messages to me in mail.</s> 
 4. Add my Photo for portfolio.
-5. Contact Us too many br tags, more gap than needed.
-6. Connect and contact at bottom do nothing.
-7. Change Title to Harshil Gupta and change logo to HG.
+5. <s>Contact Us too many br tags, more gap than needed.</s>
+6. <s>Connect and contact at bottom do nothing.</s>
+7. <s>Change Title to Harshil Gupta and change logo to HG.</s>
 8. Certificates black version is not looking good.
 9. <s> Change Photo in README to a GIF. </s>
 10. <s> Display Certificates in carousel feature. </s>
