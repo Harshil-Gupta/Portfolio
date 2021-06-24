@@ -638,10 +638,10 @@ p {
 }
 
 /*========== FOOTER ==========*/
-.footer__container {
+/* .footer__container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;
-}
+} */
 
 .footer__logo {
   font-size: var(--h3-font-size);
