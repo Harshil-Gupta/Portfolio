@@ -4,10 +4,14 @@
 /*===== WAVING HAND =====*/
 
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -15,28 +19,42 @@
   background-color: black;
   height: 5em;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
@@ -101,10 +119,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* Particle effect*/
 
 #home,
@@ -140,6 +154,7 @@ html {
     opacity: 1;
   }
 }
+
 /*Social icons*/
 
 :root {
@@ -186,6 +201,7 @@ html {
   z-index: 1;
   transition: var(--trans-props);
 }
+
 .github i {
   margin: auto;
   font-size: 24px;
@@ -290,7 +306,7 @@ a {
 }
 
 img {
-  max-width: 100%;
+  max-width: auto;
   height: auto;
 }
 
@@ -608,6 +624,7 @@ img {
 .contact__description {
   margin-bottom: var(--mb-3);
 }
+
 /*========== Animated Text ==========*/
 h1,
 p {
@@ -618,6 +635,7 @@ p {
   font-weight: 300;
   font-size: 18px;
 }
+
 .animated-text span {
   display: none;
   line-height: 1;
@@ -686,6 +704,7 @@ p {
 
 /*========== MEDIA QUERIES ==========*/
 @media screen and (min-width: 576px) {
+
   .home__container,
   .about__container,
   .app__container {
@@ -711,6 +730,7 @@ p {
   .contact__container {
     align-items: center;
   }
+
   .contact__button {
     justify-self: center;
   }
@@ -728,13 +748,16 @@ p {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
   }
+
   .nav__list {
     display: flex;
   }
+
   .nav__item {
     margin-left: var(--mb-5);
     margin-bottom: 0;
   }
+
   .nav__toggle {
     display: none;
   }
@@ -758,9 +781,11 @@ p {
     grid-template-columns: repeat(3, 280px);
     column-gap: 4rem;
   }
+
   .menu__content {
     padding: 1.5rem;
   }
+
   .menu__img {
     width: 240px;
   }
