@@ -810,3 +810,79 @@ p {
     column-gap: 4rem;
   }
 }
+
+.company-logo {
+  width: 100px; /* Initial size */
+  height: auto;
+  transition: transform 0.3s ease, width 0.3s ease;
+  cursor: pointer;
+}
+
+.company-logo:hover {
+  transform: scale(1.7); /* Enlarges the image on hover */
+}
+
+.company-logo.expanded {
+  width: 150px; /* Size when clicked */
+  transform: none; /* Reset hover transform */
+}
+
+
+/* Timeline container */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Timeline item */
+.timeline-item {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 20px;
+  position: relative;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Timeline icon (company logo) */
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* Company logo image */
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+}
+
+/* Timeline content */
+.timeline-content {
+  flex: 1;
+  padding-left: 10px;
+}
+
+/* Timeline item header */
+.timeline-content h3 {
+  margin-top: 0;
+}
+
+/* Timeline item date */
+.timeline-content span {
+  display: block;
+  color: gray;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+/* Timeline item description */
+.timeline-content p {
+  margin: 0;
+}
