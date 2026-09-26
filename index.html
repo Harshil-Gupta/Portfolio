@@ -1,459 +1,450 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Harshil Gupta is an AI Engineer and Senior Software Engineer building AI agents, operational automation, cloud systems, and data platforms." />
+    <meta name="theme-color" content="#101827" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Harshil Gupta — AI Engineer & Senior Software Engineer" />
+    <meta property="og:description" content="AI engineer building agentic workflows, reliability automation, distributed systems, and cloud data platforms." />
+    <meta property="og:url" content="https://harshil-gupta.github.io/Portfolio/" />
+    <meta property="og:image" content="https://harshil-gupta.github.io/Portfolio/images/dp.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Harshil Gupta — AI Engineer & Senior Software Engineer" />
+    <meta name="twitter:description" content="AI engineer building agentic workflows, reliability automation, distributed systems, and cloud data platforms." />
+    <link rel="canonical" href="https://harshil-gupta.github.io/Portfolio/" />
+    <link rel="icon" href="images/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Harshil Gupta — AI Engineer & Senior Software Engineer</title>
+  </head>
+  <body>
+    <header class="site-header" id="header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a class="brand" href="#home" aria-label="Harshil Gupta home">
+          <span class="brand-mark">HG</span>
+          <span class="brand-text">Harshil Gupta</span>
+        </a>
 
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet" />
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-png" />
-    <title>Harshil's Portfolio</title>
-</head>
+        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-<body>
-    <!--========== Scroll_Button ==========-->
-    <a href="#" class="scrolltop" id="scroll-top">
-        <i class='bx bx-chevron-up scrolltop__icon'></i>
-    </a>
-    <!--========== HEADER ==========-->
-    <header class="l-header" id="header">
-        <nav class="nav bd-container">
-            <a href="" class="nav__logo"></a>
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list ">
-                    <li class="nav__item"><a href="#home" class="nav__link ">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-                    <li class="nav__item"><a href="#workex" class="nav__link">Work Experience</a></li>
-                    <li class="nav__item"><a href="#project" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="#certificates" class="nav__link">Certifications</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    <li class="nav__item"><a
-                            href="https://drive.google.com/file/d/1INKg2XO__PhpSbs7H1Zw32vh2TOo-i2_/view"
-                            target="_blank" class="nav__link">Resume</a></li>
-                    <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
-                </ul>
-            </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
+        <div class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#research" class="nav-link">Research</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li>
+              <a class="nav-button" href="https://drive.google.com/file/d/1INKg2XO__PhpSbs7H1Zw32vh2TOo-i2_/view" target="_blank" rel="noreferrer">Resume</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
-    <main class="l-main">
-        <!--========== HOME ==========-->
-        <!--Parallax effect-->
-        <div class="parallax-container" id="home">
-            <div class="parallax">
-                <section class="center">
-                    <div id="particles-js"></div>
-                </section>
-            </div>
-        </div>
-        <div class="text col-sm-6" align="center">
-            Hi<span class="wave">👋</span>, I'm <span>Harshil Gupta.</span>
-            <div>
-                <div align="center">
-                    <img src="images/dp.svg" alt="" class="rounded-circle" align="center" height="200" width="200">
-                </div>
-                <p align="center">I love being a&nbsp;
-                <h1 align="center" class="animated-text" data-words="Software Developer, Data Engineer, Web Developer">
-                </h1>
-                </p>
-                <div>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/harshilgupta28/" class="footer__social"><i
-                                class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/Harshil-Gupta" class="footer__social"><i
-                                class='bx bxl-github'></i></a>
-                        <!-- <a class="social-icon github" href="https://github.com/Harshil-Gupta" target="_blank"
-                            rel="author">
-                            <i class="fab fa-github"></i>
-                        </a> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--========== About Me ==========-->
-        <section class="about section bd-container" id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about__container  bd-grid">
-                <div class="about__data">
-                    <span class="section-subtitle about__initial">A Brief Intro</span>
-                    <h2 class="section-title about__initial"></h2>
-                    <p class="about__description" style="line-height:140%">A BTech(Bachelors in Technology) graduate
-                        from <b><u><a href="http://nsut.ac.in/en">Netaji Subhas University of Technology</a></u></b>
-                        with major in Instrumentational
-                        Engineering and minor in Robotics and Artificial Intelligence.
-                        <br> I like to work with new and exciting tech stacks and I constantly work to improve my
-                        knowledge and enhance my skillset.
-                    </p>
-                    <a href="https://codeforces.com/profile/g_harshil" class="button" target="_blank">Codeforces</a>
-                    <a href="https://www.codechef.com/users/harshil_28" class="button" target="_blank">CodeChef</a>
-                    <a href="https://leetcode.com/Harshil-Gupta/" class="button" target="_blank">LeetCode</a>
-                    <div><br>
-                        <a href="https://drive.google.com/file/d/1INKg2XO__PhpSbs7H1Zw32vh2TOo-i2_/view"
-                            class="button" target="_blank">Check out my Resume </a>
-                    </div>
-                </div>
-                <img src="images/header-male.svg" alt="" class="about__img">
-            </div>
-        </section>
 
-        <!--========== Work Experience ==========-->
-        <section class="about section bd-container" id="workex">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="/Portfolio/images/CompanyLogos/natwest logo.png" alt="NatWest Logo"
-                            class="company-logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Software Engineer at NatWest Group</h3>
-                        <h6>July 2023 - Present</h6>
-                        <p>
-                            Onboarded 5+ data products using OBDEF (One Bank Data Engineering Framework (OBDEF) built on
-                            Python/Scala, improving data quality via AWS Deequ checks on in-transit/at-rest data.
-                            <br><br>
-                            Migrated on-premise Oracle RDBMS to AWS S3 using Airflow DAGs (Directed Acyclic Graphs) for
-                            real-time and batch
-                            ingestion of data on AWS, reducing storage costs by upto 25%. <br><br>
-                            Developed transformation logic for complex nested data using SQL and conducted performance
-                            tuning with optimization of
-                            data pipelines, reducing processing time and improving system performance. <br><br>
-                            Responsible for managing AWS EMR (Elastic MapReduce) configuration, resulting in a
-                            significant reduction of AWS
-                            compute costs by nearly 40%. <br><br>
-                            Managed the ETL (Extract-Transform-Load) process, extracting data in JSON format from Kafka
-                            and persisting it as
-                            Parquet on S3, benefiting from efficient columnar storage, reduced storage costs, and faster
-                            query performance. <br><br>
-                            Currently part of a team focused on integrating AWS DataZone at the bank to streamline data
-                            management processes, improve data accessibility, and ensure robust governance and security
-                            measures. This integration includes leveraging AWS services such as EMR, Athena and Glue to
-                            enhance overall data capabilities. <br><br>
-                            Performed rigorous testing for the data products built. This includes load testing of
-                            Kafka topics through automation scripts, as well as system testing, regression testing, and
-                            performance testing of already existing SQL transformation scripts,
-                            Airflow DAG code, and AWS configurations. <br><br>
-                            Used Hashicorp's Terraform as an IaaC tool (infrastructure as code) to manage AWS cloud
-                            infrastructure.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="/Portfolio/images/CompanyLogos/rbs.png" alt="RBS Logo" class="company-logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Software Engineering Intern at Royal Bank of Scotland</h3>
-                        <h6>August 2022 - June 2023</h6>
-                        <p>Assisted the Data and Analytics team to build an MLOPS (Machine Learning Operations)
-                            framework for their
-                            new customer conversation intelligence (CCI) model.
-                            <br><br>Developed monitoring scripts for the CCI model for smooth execution and assisted the
-                            work team in gathering
-                            label data for model validation.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="/Portfolio/images/CompanyLogos/Chegg.png" alt="Chegg Logo" class="company-logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Subject Matter Expert at Chegg</h3>
-                        <h6>Sep 2021 - Dec 2022</h6>
-                        <p>Registered Subject: Computer Science</p>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 4 -->
-                <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <img src="/Portfolio/images/CompanyLogos/coding ninjas.png" alt="Coding Ninjas Logo"
-                            class="company-logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Teaching Assistant at Coding Ninjas</h3>
-                        <h6>Jul 2021 - Sep 2021</h6>
-                        <p>Responsible for mentoring 100+ students in debugging their code. Helping students with the
-                            concepts of data structures and algorithms with an average rating of 4.87 out of 5.0.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--========== Projects ==========-->
-        <section class="menu section bd-container" id="project">
-            <h2 class="section-title">Projects</h2>
-
-            <div class="menu__container bd-grid">
-
-                <div class="menu__content">
-                    <img src="https://s-i.huffpost.com/gen/1880660/images/o-SOCIAL-INVESTMENT-facebook.jpg" height=10px
-                        width=100px alt="" class="menu__img">
-                    <h3 class="menu__name" align="center">EcoEquity</h3>
-                    <span class="menu__detail" align="center">Investment Tracking Website<br>Where Ethics Meet
-                        Investing</span><br>
-                    <a href="https://github.com/Harshil-Gupta/EcoEquity" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="https://ecoequity-orcin.vercel.app" class="button menu__button" target="_blank"><i
-                            class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <div class="menu__content">
-                    <img src="images/project2.JPG" height=10px width=100px alt="" class="menu__img">
-                    <h3 class="menu__name" align="center">YelpCamp</h3>
-                    <span class="menu__detail" align="center">Website that lets users add/edit
-                        Campgrounds and a lot of other functions.<br>Inspiration from Colt Steele's Bootcamp</span><br>
-                    <a href="https://github.com/Harshil-Gupta/YelpCamp" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="https://github.com/Harshil-Gupta/YelpCamp" class="button menu__button" target="_blank"><i
-                            class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <div class="menu__content">
-                    <img src="data:image/jpeg;base64,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"
-                        height="80" width="300" alt="EmotionRecognition" class="menu__img">
-                    <h3 class="menu__name" align="center">Emotion Recognition</h3>
-                    <span class="menu__detail" align="center">Developed two distinct models within the EEG-based emotion
-                        recognition system. The first model
-                        utilized Arousal and Valence dimensions to classify emotions, while the second model
-                        incorporated: Arousal,
-                        Valence, Dominance, and Liking.</span>
-                    <a href="https://github.com/Harshil-Gupta/EmotionRecognition" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="https://github.com/Harshil-Gupta/EmotionRecognition/blob/main/Springer%20Journal%20Paper.pdf"
-                        class="button menu__button"><i class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <div class="menu__content">
-                    <img src="images/Portfolio.png" alt="My Portfolio" class="menu__img">
-                    <h3 class="menu__name" align="center">My Portfolio!</h3>
-                    <span class="menu__detail" align="center">Responsive Website that displays my information.</span>
-                    <a href="https://github.com/Harshil-Gupta" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="#" class="button menu__button"><i class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <div class="menu__content">
-                    <video autoplay muted>
-                        <source
-                            src="https://user-images.githubusercontent.com/53968071/179833047-ab1dc61b-9306-4c54-9b38-64456abc4b69.mp4"
-                            type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <h3 class="menu__name" align="center">Amazon Clone</h3>
-                    <span class="menu__detail" align="center">A simple E-commerce website built using React.js
-                        The UI built replicates Amazon and has many similar features
-                        like Login, Register, CartList etc.</span><br>
-                    <a href="https://github.com/Harshil-Gupta/AmazonClone" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="https://github.com/Harshil-Gupta/AmazonClone" class="button menu__button"
-                        target="_blank"><i class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <div class="menu__content">
-                    <img src="https://user-images.githubusercontent.com/53968071/178152012-af056bfb-0ca9-489f-80c7-34c2fc6509d5.png"
-                        alt="ScoreKeeper" class="menu__img">
-                    <h3 class="menu__name" align="center">Score Keeper</h3>
-                    <span class="menu__detail" align="center">Website made using basic front-end technologies.</span>
-                    <a href="https://github.com/Harshil-Gupta/ScoreKeeper" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="https://scorekeeper-harshil.herokuapp.com/" class="button menu__button" target="_blank"><i
-                            class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <div class="menu__content">
-                    <img src="https://numerocero.es/wp-content/uploads/2019/08/Bitcoin-code.jpg" alt="MaximumScore"
-                        class="menu__img">
-                    <h3 class="menu__name" align="center">Maximum Profit</h3>
-                    <span class="menu__detail" align="center">Script that helps Bitcoin miners choose transactions to
-                        maximize their fee profit earned by validating a block.</span>
-                    <a href="https://github.com/Harshil-Gupta/Summer-Of-Bitcoin" class="button git__button"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="https://github.com/Harshil-Gupta/Summer-Of-Bitcoin" class="button menu__button"
-                        target="_blank"><i class='bx bx-caret-right-circle'></i></a>
-                </div>
-
-                <!--<div class="menu__content">
-                <img src="images/in_progress.png" alt="" class="menu__img">
-                <h3 class="menu__name" align = "center">Working on something exciting!</h3>
-                <span class="menu__detail" align = "center">In Progress....</span><br>
-                <a href="#" class="button git__button"><i class='bx bxl-github'></i></a>
-                <a href="#" class="button menu__button"><i class='bx bx-caret-right-circle'></i></a>
-            </div> -->
-            </div>
-        </section>
-
-        <!--========== CERTIFICATIONS ==========-->
-
-        <section class="certificates section bd-container" id="certificates">
-            <div class="certificates__container bd-grid">
-                <h2 class="section-title">Certifications</h2>
-                <div class="certificates__data">
-                    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0"
-                                class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                                aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                                aria-label="Slide 3"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
-                                aria-label="Slide 4"></button>
-                            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
-                                aria-label="Slide 5"></button>
-                        </div>
-                        <div class="carousel-inner" align="center">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="images/Certifications/AWS_Cloud_Practitioner.png" class="d-block w-50"
-                                    alt="...">
-                                <p id="block-under-image"></p>
-                                <div class="carousel-caption">
-                                    <h5> <a href="https://www.credly.com/badges/60f74ff1-ff7c-41e7-b653-c3c0eb11b604/public_url"
-                                            class="button" target="_blank">AWS Cloud Practitioner</a></h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2500">
-                                <img src="images/Certifications/FullStackWebDeveloperUdacity.png" class="d-block w-50"
-                                    alt="...">
-                                <p id="block-under-image"></p>
-                                <div class="carousel-caption">
-                                    <h5> <a href="https://www.udacity.com/certificate/e/9ff87d14-8177-11ef-8976-37b10c30d375"
-                                            class="button" target="_blank">Udacity Full Stack Developer</a></h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2500">
-                                <img src="images/Certifications/Algorithmic_Toolbox.png" class="d-block w-50" alt="...">
-                                <p id="block-under-image"></p>
-                                <div class="carousel-caption">
-                                    <h5> <a href="https://www.coursera.org/account/accomplishments/verify/TN223N4ZDUCA"
-                                            class="button" target="_blank">Algorithmic Toolbox</a></h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2500">
-                                <img src="images/Certifications/Programming_For_Everybody.png" class="d-block w-50"
-                                    alt="...">
-                                <p id="block-under-image"></p>
-                                <div class="carousel-caption">
-                                    <h5> <a href="https://www.coursera.org/account/accomplishments/verify/P22FA5SLLX5Y"
-                                            class="button" target="_blank">Programming For Everybody</a></h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2500">
-                                <img src="images/Certifications/Coding_Ninjas.png" class="d-block w-50" alt="...">
-                                <p id="block-under-image"></p>
-                                <div class="carousel-caption">
-                                    <h5> <a href="http://files.codingninjas.in/certificate963495608c2e7ac973a7f51183fa08b2dd1b12.pdf"
-                                            class="button" target="_blank">Coding Ninjas C++ Excellence</a></h5>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2500">
-                                <img src="images/Certifications/postman.png" class="d-block w-50" alt="...">
-                                <p id="block-under-image"></p>
-                                <div class="carousel-caption">
-                                    <h5> <a href="https://badgr.com/public/assertions/rK8L4p5aSA2RZ8Jl6MTOmg"
-                                            class="button" target="_blank">Postman API Fundamentals Student Expert</a>
-                                    </h5>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <!--========== CONTACT US ==========-->
-        <section class="contact section bd-container" id="contact">
-            <form class="contact__container bd-grid" action="https://formspree.io/f/xeqvzjbn" method="POST">
-                <!-- <div > -->
-                <div class="contact__data">
-                    <span class="section-subtitle contact__initial">Let's talk</span>
-                    <h2 class="section-title contact__initial">Contact </h2>
-                    <div class="row g-3">
-                        <div class="col-md-4 offset-md-4 ">
-                            <label for="fname">First Name :</label>
-                            <input type="text" class="form-control" placeholder="First Name" aria-label="First name"
-                                required name="first-name">
-                        </div>
-                        <div class="col-md-4 offset-md-4 ">
-                            <label for="lname">Last Name :</label>
-                            <input type="text" class="form-control" placeholder="Last Name" aria-label="Last name"
-                                required name="last-name">
-                        </div>
-                        <div class="col-md-4 offset-md-4 ">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" name="email"
-                                aria-describedby="emailHelp"
-                                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
-                                required placeholder="Email Address">
-                            <br>
-                        </div>
-                        <div class="form-group col-md-6 offset-md-3">
-                            <label for="content">Describe your issue :</label>
-                            <textarea class="form-control" name="message" id="message"
-                                placeholder="Your response will be mailed to Harshil Gupta and he will get back to you immediately."></textarea>
-                        </div>
-                        <div class="contact__button">
-                            <button class="button" type="submit" value="send">Contact me now</button>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                </div>
-            </form>
-        </section>
-        <!--========== FOOTER ==========-->
-        <footer class="footer section bd-container" align=center>
-            <div class="footer__container bd-grid">
-                <div class="footer__content">
-                    <a href="#" class="footer__logo">Portfolio of Harshil Gupta</a>
-                    <span class="footer__description"><b>I hope that you like it and reach out to me.
-                            <br>Scan the QR-Code below for a suprise!</b></span>
-                    <div>
-                        <a href="https://www.linkedin.com/in/harshilgupta28/" class="footer__social"><i
-                                class='bx bxl-linkedin'></i></a>
-                        <a href="https://www.instagram.com/" class="footer__social"><i class='bx bxl-instagram'></i></a>
-                        <a href="https://twitter.com/" class="footer__social"><i class='bx bxl-twitter'></i></a>
-                        <a href="https://github.com/Harshil-Gupta" class="footer__social"><i
-                                class='bx bxl-github'></i></a>
-                    </div>
-                    <div><img src="images/qr-code.png" alt="QR-Code" width="300" height="300"></div>
-                </div>
-            </div>
-            <!-- <p class="footer__copy">&#169; Harshil Gupta 2021 </p>-->
-            <p class="footer__copy">&#169; Harshil Gupta
-                <script>document.write(new Date().getFullYear());</script>
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">AI Engineer · Senior Software Engineer · Systems Builder</p>
+            <h1>Harshil Gupta</h1>
+            <p class="headline">
+              I build AI agents that help SRE teams investigate incidents and operate complex systems.
             </p>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-        <script src="js/particle.js"></script>
-        <script src="js/main.js"></script>
-        <script src="https://unpkg.com/scrollreveal"></script>
-</body>
+            <p class="supporting-copy">
+              At Salesforce, I am building Aura, an agentic reliability system using Mastra. My work spans operational tooling,
+              distributed systems, and cloud data platforms.
+            </p>
+            <div class="cta-row">
+              <a class="button button-primary" href="#projects">View Case Studies</a>
+              <a class="button button-secondary" href="#contact">Contact Me</a>
+              <a class="button button-secondary" href="https://drive.google.com/file/d/1INKg2XO__PhpSbs7H1Zw32vh2TOo-i2_/view" target="_blank" rel="noreferrer">Resume</a>
+            </div>
+            <div class="social-row" aria-label="Social links">
+              <a href="https://github.com/Harshil-Gupta" target="_blank" rel="noreferrer" aria-label="GitHub">GitHub</a>
+              <a href="https://www.linkedin.com/in/harshilgupta28/" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedIn</a>
+              <a href="mailto:harshilgupta28@gmail.com" aria-label="Email">Email</a>
+            </div>
+          </div>
 
+          <div class="hero-visual reveal" aria-hidden="true">
+            <div class="visual-panel">
+              <div class="visual-header">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="node-map">
+                <div class="node-row node-row-top">
+                  <div class="node node-user">SRE signal</div>
+                  <div class="flow-arrow">→</div>
+                  <div class="node node-agent">Aura agent · Mastra</div>
+                </div>
+                <div class="flow-arrow flow-arrow-vertical">↓</div>
+                <div class="tool-grid">
+                  <div class="node node-tools">Slack · MCP tools</div>
+                  <div class="node node-cloud">Service diagnostics</div>
+                  <div class="node node-data">Operational context</div>
+                  <div class="node node-observe">Human-reviewed next steps</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow-contrast">Selected work</p>
+            <h2>Engineering case studies</h2>
+          </div>
+
+          <div class="project-grid reveal">
+            <article class="project-card" data-project="aura">
+              <div class="project-topline">
+                <span class="project-type">SRE / Agentic Systems</span>
+                <span class="project-technology">TypeScript · Mastra · MCP</span>
+              </div>
+              <h3>Aura</h3>
+              <p>
+                An internal Salesforce initiative building AI agents for SRE workflows, bringing operational context and diagnostic tools
+                together to support incident investigation.
+              </p>
+              <div class="chip-list small">
+                <span>SRE agents</span>
+                <span>Mastra</span>
+                <span>Slack MCP</span>
+              </div>
+              <div class="project-links">
+                <button class="inline-link project-trigger" type="button">Case study</button>
+              </div>
+            </article>
+
+            <article class="project-card" data-project="legalbuddy">
+              <div class="project-topline">
+                <span class="project-type">AI / Mobile Product</span>
+                <span class="project-technology">Kotlin · Compose · OpenRouter</span>
+              </div>
+              <h3>LegalBuddy</h3>
+              <p>
+                An Android assistant for grounded legal guidance, with evidence-backed responses and claim verification designed to make
+                answers easier to inspect.
+              </p>
+              <div class="chip-list small">
+                <span>MVVM</span>
+                <span>Room</span>
+                <span>SSE</span>
+              </div>
+              <div class="project-links">
+                <button class="inline-link project-trigger" type="button">Case study</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow-contrast">About</p>
+            <h2>AI × Software Engineering × Cloud Infrastructure</h2>
+          </div>
+
+          <div class="about-grid reveal">
+            <div class="about-copy">
+              <p>
+                I work at the intersection of AI, software engineering, cloud architecture, and reliability. My background spans
+                AI/ML, backend systems, distributed infrastructure, data platforms, and agentic product development.
+              </p>
+              <p>
+                I care about building systems that are not only intelligent, but also robust, observable, and dependable under real
+                operational conditions.
+              </p>
+            </div>
+
+            <div class="capabilities">
+              <h3>What I build</h3>
+              <div class="chip-list">
+                <span>AI Agents</span>
+                <span>Reliability Automation</span>
+                <span>Cloud Systems</span>
+                <span>Data Platforms</span>
+                <span>Developer Tools</span>
+                <span>Intelligent Workflows</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-panel" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow-contrast">Experience</p>
+            <h2>Operating at the edge of AI and production systems</h2>
+          </div>
+
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <div class="timeline-badge">Salesforce</div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <p class="role-title">AI Engineer / Senior Software Engineer</p>
+                    <p class="meta">Salesforce · Bangalore · Dec 2025 – Present</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>Building Aura, an AI-agent initiative for SRE workflows using the Mastra orchestration framework.</li>
+                  <li>Connecting Slack MCP integrations and operational diagnostics to support incident investigation.</li>
+                  <li>Developing agentic workflows and production tooling for reliability engineering across distributed systems.</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="timeline-badge alt">NatWest</div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <div>
+                    <p class="role-title">Senior Software Engineer / Software Engineer</p>
+                    <p class="meta">NatWest Group · 2023 – 2025</p>
+                  </div>
+                </div>
+                <ul>
+                  <li>Onboarded 5+ data products using OBDEF and AWS Deequ checks to improve data quality across data in transit and at rest.</li>
+                  <li>Migrated on-premises Oracle data to S3 with Airflow workflows, reducing storage costs by up to 25%; managed EMR configuration that reduced compute costs by nearly 40%.</li>
+                  <li>Built SQL transformations for nested data and Kafka-to-Parquet pipelines on S3; supported DataZone integration, testing, and Terraform-managed AWS infrastructure.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-panel" id="research">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow-contrast">Research</p>
+            <h2>Applied ML and systems thinking</h2>
+          </div>
+
+          <div class="research-list reveal">
+            <article class="research-item">
+              <div>
+                <p class="research-topic">EEG-based Emotion Recognition</p>
+                <h3>Emotion Recognition through multimodal affective signal analysis</h3>
+              </div>
+              <p>
+                Explored classification systems for valence, arousal, dominance, and liking dimensions using machine learning techniques and
+                signal interpretation pipelines.
+              </p>
+              <div class="research-meta">
+                <span>Research</span>
+                <span>Python · ML</span>
+                <span><a href="https://github.com/Harshil-Gupta/EmotionRecognition/blob/main/Springer%20Journal%20Paper.pdf" target="_blank" rel="noreferrer">Paper</a></span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow-contrast">Skills</p>
+            <h2>Capabilities across AI, systems, and platforms</h2>
+          </div>
+
+          <div class="skills-grid reveal">
+            <div class="skill-group">
+              <h3>AI & Agentic Systems</h3>
+              <div class="chip-list">
+                <span>LLMs</span>
+                <span>AI Agents</span>
+                <span>Agentic Workflows</span>
+                <span>MCP</span>
+                <span>Mastra</span>
+                <span>RAG</span>
+                <span>Evaluation</span>
+                <span>AI Automation</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Backend & Systems</h3>
+              <div class="chip-list">
+                <span>TypeScript</span>
+                <span>Python</span>
+                <span>REST</span>
+                <span>GraphQL</span>
+                <span>Distributed Systems</span>
+                <span>API Design</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Cloud & Infrastructure</h3>
+              <div class="chip-list">
+                <span>AWS</span>
+                <span>GCP</span>
+                <span>S3</span>
+                <span>EMR</span>
+                <span>Glue</span>
+                <span>Athena</span>
+                <span>Lambda</span>
+                <span>IAM</span>
+                <span>CloudWatch</span>
+                <span>Terraform</span>
+                <span>IaC</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Data Engineering</h3>
+              <div class="chip-list">
+                <span>Kafka</span>
+                <span>Airflow</span>
+                <span>MWAA</span>
+                <span>Data Lakes</span>
+                <span>ETL/ELT</span>
+                <span>Data Quality</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <h3>Development</h3>
+              <div class="chip-list">
+                <span>Git</span>
+                <span>Docker</span>
+                <span>CI/CD</span>
+                <span>Testing</span>
+                <span>Observability</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-panel" id="highlights">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow eyebrow-contrast">Highlights</p>
+            <h2>Selected accomplishments</h2>
+          </div>
+
+          <div class="highlight-grid reveal">
+            <div class="highlight-item"><span>GCP AI Skills Hackathon winner</span></div>
+            <div class="highlight-item"><span>AWS Developer Associate</span></div>
+            <div class="highlight-item"><span>AWS Cloud Practitioner</span></div>
+            <div class="highlight-item"><span>Published AI/ML research</span></div>
+            <div class="highlight-item"><a href="https://www.udacity.com/certificate/e/9ff87d14-8177-11ef-8976-37b10c30d375" target="_blank" rel="noreferrer">Udacity Full Stack Developer</a></div>
+            <div class="highlight-item"><span>AI agent engineering</span></div>
+            <div class="highlight-item"><span>Cloud and data engineering experience</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="philosophy">
+        <div class="container narrow reveal">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-contrast">How I think</p>
+            <h2>I like building systems that...</h2>
+          </div>
+          <div class="philosophy-stack">
+            <p>Automate repetitive engineering work.</p>
+            <p>Turn operational knowledge into software.</p>
+            <p>Make complex infrastructure easier to operate.</p>
+            <p>Use AI where it creates measurable leverage — not just because AI is fashionable.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-cta" id="contact">
+        <div class="container contact-wrap reveal">
+          <div>
+            <p class="eyebrow eyebrow-contrast">Contact</p>
+            <h2>Let’s build something useful.</h2>
+          </div>
+          <p>
+            I’m interested in AI systems, developer tooling, reliability engineering, infrastructure, and ambitious technical problems.
+          </p>
+
+          <form class="contact-form" action="https://formspree.io/f/xeqvzjbn" method="POST">
+            <div class="form-grid">
+              <div class="field">
+                <label for="first-name">First name</label>
+                <input id="first-name" name="first-name" type="text" placeholder="Your first name" required />
+              </div>
+              <div class="field">
+                <label for="last-name">Last name</label>
+                <input id="last-name" name="last-name" type="text" placeholder="Your last name" required />
+              </div>
+              <div class="field full-width">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about the project, role, or problem you want to solve." required></textarea>
+              </div>
+            </div>
+
+            <div class="submit-row">
+              <button class="button button-primary" type="submit">Send message</button>
+            </div>
+          </form>
+
+          <div class="contact-links">
+            <a href="mailto:harshilgupta28@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/harshilgupta28/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Harshil-Gupta" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://drive.google.com/file/d/1INKg2XO__PhpSbs7H1Zw32vh2TOo-i2_/view" target="_blank" rel="noreferrer">Resume</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-name">Harshil Gupta</p>
+          <p class="footer-role">AI Engineer · Software Engineer · Systems Builder</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Harshil-Gupta" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/harshilgupta28/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:harshilgupta28@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="container footer-meta">
+        <p>© <span id="year"></span> Harshil Gupta</p>
+      </div>
+    </footer>
+
+    <div class="project-modal" id="project-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="Close project detail">×</button>
+        <div class="modal-content">
+          <p class="eyebrow eyebrow-contrast">Case study</p>
+          <h3 id="modal-title">Project</h3>
+          <div id="modal-body"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>

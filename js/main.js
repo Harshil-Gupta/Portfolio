@@ -1,143 +1,159 @@
-/*==================== SHOW MENU ====================*/
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
+const header = document.getElementById("header");
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+const projectCards = document.querySelectorAll(".project-card[data-project]");
+const modal = document.getElementById("project-modal");
+const modalTitle = document.getElementById("modal-title");
+const modalBody = document.getElementById("modal-body");
+const year = document.getElementById("year");
 
-  // Validate that variables exist
-  if (toggle && nav) {
-    toggle.addEventListener("click", () => {
-      // We add the show-menu class to the div tag with the nav__menu class
-      nav.classList.toggle("show-menu");
-    });
+if (year) {
+  year.textContent = new Date().getFullYear();
+}
+
+function updateHeaderState() {
+  if (!header) return;
+  header.classList.toggle("is-scrolled", window.scrollY > 12);
+}
+
+window.addEventListener("scroll", updateHeaderState, { passive: true });
+updateHeaderState();
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+    if (navMenu) navMenu.classList.remove("is-open");
+    if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+  });
+});
+
+const projectDetails = {
+  "aura": {
+    title: "Aura",
+    content: `
+      <div class="content-block">
+        <div>
+          <h4>Overview</h4>
+          <p>A Salesforce internal initiative building AI agents for the SRE team, using Mastra to orchestrate agentic reliability workflows.</p>
+        </div>
+        <div>
+          <h4>Problem space</h4>
+          <p>Incident investigation can require engineers to gather operational context and diagnostic information across multiple tools and systems.</p>
+        </div>
+        <div>
+          <h4>Engineering approach</h4>
+          <ul>
+            <li>Mastra-based orchestration for SRE-focused agent workflows.</li>
+            <li>Slack MCP integrations and diagnostic aggregation to bring relevant operational context together.</li>
+            <li>Workflow design focused on supporting investigation and mitigation guidance, with engineers retaining operational judgment.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Scope</h4>
+          <p>Internal Salesforce work. Implementation details are kept high-level; no impact metrics are published here.</p>
+        </div>
+      </div>
+    `
+  },
+  "legalbuddy": {
+    title: "LegalBuddy",
+    content: `
+      <div class="content-block">
+        <div>
+          <h4>Overview</h4>
+          <p>An Android assistant for legal workflows, designed around grounded responses, evidence-backed reasoning, and claim verification.</p>
+        </div>
+        <div>
+          <h4>Problem</h4>
+          <p>Legal answers need to be inspectable. The product emphasizes grounding and traceability instead of asking users to trust unsupported model output.</p>
+        </div>
+        <div>
+          <h4>Design decisions</h4>
+          <ul>
+            <li>Kotlin Android application with a Jetpack Compose interface.</li>
+            <li>MVVM structure with Room persistence for local application state.</li>
+            <li>Server-sent events (SSE) for streamed responses and OpenRouter-backed model calls.</li>
+            <li>Evidence spans and claim verification to make responses easier to check.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Stack</h4>
+          <p>Kotlin, Android, Compose, MVVM, Room, SSE, OpenRouter.</p>
+        </div>
+      </div>
+    `
   }
 };
-showMenu("nav-toggle", "nav-menu");
 
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll(".nav__link");
+function openProjectModal(projectKey) {
+  const details = projectDetails[projectKey];
+  if (!details || !modal || !modalTitle || !modalBody) return;
 
-function linkAction() {
-  const navMenu = document.getElementById("nav-menu");
-  // When we click on each nav__link, we remove the show-menu class
-  navMenu.classList.remove("show-menu");
+  modalTitle.textContent = details.title;
+  modalBody.innerHTML = details.content;
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
 }
-navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-const sections = document.querySelectorAll("section[id]");
+function closeProjectModal() {
+  if (!modal) return;
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+}
 
-function scrollActive() {
-  const scrollY = window.pageYOffset;
+projectCards.forEach((projectCard) => {
+  const trigger = projectCard.querySelector(".project-trigger");
+  if (!trigger) return;
 
-  sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight;
-    const sectionTop = current.offsetTop - 50;
-    sectionId = current.getAttribute("id");
+  trigger.addEventListener("click", () => {
+    openProjectModal(projectCard.dataset.project);
+  });
+});
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.add("active-link");
-    } else {
-      document
-        .querySelector(".nav__menu a[href*=" + sectionId + "]")
-        .classList.remove("active-link");
+const modalClose = document.querySelector(".modal-close");
+if (modalClose) {
+  modalClose.addEventListener("click", closeProjectModal);
+}
+
+if (modal) {
+  modal.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof HTMLElement && target.dataset.close === "true") {
+      closeProjectModal();
     }
   });
 }
-window.addEventListener("scroll", scrollActive);
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/
-function scrollHeader() {
-  const nav = document.getElementById("header");
-  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
-  if (this.scrollY >= 200) nav.classList.add("scroll-header");
-  else nav.classList.remove("scroll-header");
-}
-window.addEventListener("scroll", scrollHeader);
-
-/*==================== SHOW SCROLL TOP ====================*/
-function scrollTop() {
-  const scrollTop = document.getElementById("scroll-top");
-  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 560) scrollTop.classList.add("show-scroll");
-  else scrollTop.classList.remove("show-scroll");
-}
-window.addEventListener("scroll", scrollTop);
-
-/*==================== DARK LIGHT THEME ====================*/
-const themeButton = document.getElementById("theme-button");
-const darkTheme = "dark-theme";
-const iconTheme = "bx-sun";
-
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem("selected-theme");
-const selectedIcon = localStorage.getItem("selected-icon");
-
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () =>
-  document.body.classList.contains(darkTheme) ? "dark" : "light";
-const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
-
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-    darkTheme
-  );
-  themeButton.classList[selectedIcon === "bx-moon" ? "add" : "remove"](
-    iconTheme
-  );
-}
-
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  // We save the theme and the current icon that the user chose
-  localStorage.setItem("selected-theme", getCurrentTheme());
-  localStorage.setItem("selected-icon", getCurrentIcon());
-});
-
-/*==================== SCROLL REVEAL ANIMATION ====================*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "30px",
-  duration: 2000,
-  reset: true,
-});
-
-sr.reveal(
-  `.home__data, .home__img,
-            .about__data, .about__img,
-            .services__content, .menu__content,
-            .app__data, .app__img,
-            .contact__data, .contact__button, .certificates__content, .certificates__data,
-            .footer__content`,
-  {
-    interval: 200,
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && modal && modal.classList.contains("is-open")) {
+    closeProjectModal();
   }
-)(function () {
-  "use strict";
+});
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll(".needs-validation");
+const revealItems = document.querySelectorAll(".reveal");
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.12 }
+);
 
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
-    form.addEventListener(
-      "submit",
-      function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
+revealItems.forEach((item) => revealObserver.observe(item));
 
-        form.classList.add("was-validated");
-      },
-      false
-    );
-  });
-})();
+
+
+
