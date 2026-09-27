@@ -61,8 +61,12 @@ button { cursor: pointer; }
 .supporting-copy { max-width: 43rem; margin: 0 0 1.7rem; color: var(--muted); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.2rem; }
 .social-row, .contact-links, .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+.social-row { align-items: center; }
 .social-row a, .footer-links a, .contact-links a, .project-links a, .project-links button, .research-meta a { color: var(--muted); font-weight: 600; }
 .social-row a:hover, .footer-links a:hover, .contact-links a:hover, .project-links a:hover, .research-meta a:hover { color: var(--primary); }
+.social-row .social-icon { display: grid; width: 40px; aspect-ratio: 1; place-items: center; padding: 0.55rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); }
+.social-icon img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.social-icon:focus-visible { outline: 3px solid var(--primary); outline-offset: 2px; }
 .hero-visual { display: flex; justify-content: center; }
 .visual-panel { position: relative; width: min(100%, 500px); min-height: 390px; overflow: hidden; padding: 1rem; border: 1px solid rgba(255,255,255,.12); border-radius: 24px; color: white; background: linear-gradient(160deg, #182235, #111827); box-shadow: var(--shadow); }
 .visual-panel::before { position: absolute; inset: 0; content: ""; background: linear-gradient(135deg, rgba(59,130,246,.14), rgba(124,58,237,.1)); pointer-events: none; }
