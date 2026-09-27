@@ -90,6 +90,8 @@ button { cursor: pointer; }
 .timeline-item { display: grid; grid-template-columns: 200px 1fr; gap: 1.3rem; padding: 1.3rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
 .timeline-badge { min-height: 64px; display: grid; place-items: center; padding: 0.8rem; border-radius: 14px; color: var(--primary-strong); background: rgba(29,78,216,.12); font-weight: 800; text-align: center; }
 .timeline-badge.alt { color: var(--success); background: rgba(15,118,110,.12); }
+.timeline-logo { background: #fff; border: 1px solid var(--line); }
+.timeline-logo img { width: min(100%, 176px); max-height: 82px; object-fit: contain; }
 .timeline-content { display: grid; gap: 0.8rem; }
 .timeline-header { display: flex; justify-content: space-between; gap: 1rem; }
 .role-title { margin: 0; font-size: 1.35rem; font-weight: 700; }
