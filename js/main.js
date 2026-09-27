@@ -7,6 +7,50 @@ const modal = document.getElementById("project-modal");
 const modalTitle = document.getElementById("modal-title");
 const modalBody = document.getElementById("modal-body");
 const year = document.getElementById("year");
+const themeToggle = document.getElementById("theme-toggle");
+const themeColorMeta = document.getElementById("theme-color");
+
+function applyTheme(theme, persist = false) {
+  const isDark = theme === "dark";
+  document.documentElement.dataset.theme = isDark ? "dark" : "light";
+
+  if (themeToggle) {
+    const actionLabel = `Switch to ${isDark ? "light" : "dark"} theme`;
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", actionLabel);
+    themeToggle.title = actionLabel;
+  }
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", isDark ? "#101820" : "#f5f7fb");
+  }
+
+  if (persist) {
+    try {
+      localStorage.setItem("portfolio-theme", isDark ? "dark" : "light");
+    } catch {
+      // The theme still works when storage is unavailable.
+    }
+  }
+}
+
+let savedTheme = null;
+try {
+  savedTheme = localStorage.getItem("portfolio-theme");
+} catch {
+  savedTheme = null;
+}
+
+const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+const initialTheme = savedTheme === "dark" || savedTheme === "light" ? savedTheme : preferredTheme;
+applyTheme(initialTheme);
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = document.documentElement.dataset.theme;
+    applyTheme(currentTheme === "dark" ? "light" : "dark", true);
+  });
+}
 
 if (year) {
   year.textContent = new Date().getFullYear();
